@@ -1,14 +1,13 @@
-package greekutil_test
+package greekutil
 
 import (
-	"reizu/pkg/greekutil"
 	"testing"
 )
 
 func TestGreeklish(t *testing.T) {
 	var tests = []struct {
-		input    string
-		expected string
+		in   string
+		want string
 	}{
 		{"", ""},
 		{"Λαϊκά", "Laika"},
@@ -17,9 +16,9 @@ func TestGreeklish(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		actual := greekutil.Greeklish(tt.input)
-		if actual != tt.expected {
-			t.Errorf("Expected %s; got %s", tt.expected, actual)
+		got := Greeklish(tt.in)
+		if got != tt.want {
+			t.Errorf("Greeklish(%q) = %q; want %q", tt.in, got, tt.want)
 		}
 	}
 }

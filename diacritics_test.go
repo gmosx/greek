@@ -1,23 +1,22 @@
-package greekutil_test
+package greekutil
 
 import (
-	"reizu/pkg/greekutil"
 	"testing"
 )
 
 func TestStripDiacritics(t *testing.T) {
 	var tests = []struct {
-		input    string
-		expected string // expected result
+		in   string
+		want string
 	}{
 		{"Λαϊκά", "Λαικα"},
 		{"Αρνάκι άσπρο και παχύ", "Αρνακι ασπρο και παχυ"},
 	}
 
 	for _, tt := range tests {
-		actual := greekutil.StripDiacritics(tt.input)
-		if actual != tt.expected {
-			t.Errorf("Expected %s; got %s", tt.expected, actual)
+		got := StripDiacritics(tt.in)
+		if got != tt.want {
+			t.Errorf("StipDiacritics(%q) = %q; want %q", tt.in, got, tt.want)
 		}
 	}
 }
