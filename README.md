@@ -1,4 +1,4 @@
-# Greek Utilities
+# Greek
 
 A collection of utilities related to the Greek language.
 

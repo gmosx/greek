@@ -1,4 +1,4 @@
-package greekutil
+package greek
 
 import (
 	"regexp"
