@@ -23,7 +23,7 @@ var stripDiacriticsRules = []rule{
 	{regexp.MustCompile("[ΏὨὩὪὫὬὭὮὯ]"), "Ω"},
 }
 
-// StripDiacritics is TODO.
+// StripDiacritics removes diacritics from the input string.
 func StripDiacritics(s string) string {
 	return applyRules(s, stripDiacriticsRules)
 }

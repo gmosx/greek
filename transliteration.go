@@ -104,7 +104,7 @@ var greekToGreeklishRules = []rule{
 	{regexp.MustCompile(";"), "?"},
 }
 
-// Greeklish is TODO.
+// Greeklish returns s transliterated into greeklish.
 func Greeklish(s string) string {
 	return applyRules(s, greekToGreeklishRules)
 }

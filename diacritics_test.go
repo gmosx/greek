@@ -8,7 +8,7 @@ import (
 func TestStripDiacritics(t *testing.T) {
 	var tests = []struct {
 		input    string
-		expected string
+		expected string // expected result
 	}{
 		{"Λαϊκά", "Λαικα"},
 		{"Αρνάκι άσπρο και παχύ", "Αρνακι ασπρο και παχυ"},
