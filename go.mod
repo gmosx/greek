@@ -1,3 +1,3 @@
-module go.reizu.org/pkg/greek
+module go.reizu.org/greek
 
 go 1.12
